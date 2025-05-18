@@ -45,7 +45,7 @@ public class MoneyTweaks : BasePlugin
 
     public static CCSPlayerController? GetActualTarget(CCSPlayerController? commandCaller, CommandInfo info, int argPos)
     {
-        var argNotPresent = info.ArgCount < (argPos - 1);
+        var argNotPresent = info.ArgCount < argPos;
         if (commandCaller == null && argNotPresent)
         {
             info.ReplyToCommand("Must specify a player at the argument with index " + argPos);
